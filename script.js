@@ -12,7 +12,7 @@ $.getJSON("sf_crime.geojson",function(data){
 	var crimes = L.geoJson(data ,{
 		pointToLayer: function(feature,latlng){
 			var marker = L.marker(latlng,{icon: crimeIcon});
-	  		marker.bindPopup(feature.properties.date + '<br/>' + feature.properites.title + '<br/>' + feature.properties.description);
+	  		marker.bindPopup(feature.properties.date + '<br/>' + feature.properties.title + '<br/>' + feature.properties.description);
 	  		return marker;
   		}
 	});
